@@ -1,0 +1,11 @@
+<div class="horizontal-frame">
+    <h2>Latest News</h2>
+    <div class="image-container">
+      <div class="image-item" *ngFor="let post of posts">
+        <img [src]="'data:image/jpeg;base64,' + post.byteImg" alt="{{ post.name }}">
+        <p>{{ post.name }}</p>
+        <p>Posted by: {{ post.postedBy }}</p>
+      </div>
+    </div>
+  </div>
+  

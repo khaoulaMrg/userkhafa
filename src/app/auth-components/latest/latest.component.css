@@ -1,0 +1,23 @@
+/* dashboard.component.css */
+.horizontal-frame {
+    width: 100%;
+    overflow: auto;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .image-item {
+    flex: 0 0 auto;
+    margin-right: 16px;
+  }
+  
+  .image-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  

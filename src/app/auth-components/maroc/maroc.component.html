@@ -1,0 +1,91 @@
+
+<body>
+
+    <h1 class="title-with-line">Maroc news</h1>
+    <div class="wrapper-container">
+    <div class="wrapper">
+        <div class="container">
+            <div class="frame">
+                <img src="assets/img/job1.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="title">
+            <h3  nzType="link" routerLink="/nouvelle" routerLinkActive="active">Titre</h3>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="frame">
+                <img src="assets/img/job1.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="title">
+            <h3>Title 1</h3>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div class="container">
+            <div class="frame">
+                <img src="assets/img/job1.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="title">
+            <h3>Title 1</h3>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<h1 class="title-with-line">Latest news</h1>
+<div class="wrapper-container">
+    <div class="wrapper">
+        <div class="container">
+            <div class="frame">
+                <img src="assets/img/job1.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="title">
+            <h3  nzType="link" routerLink="/maroc" routerLinkActive="active">Title 1</h3>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="frame">
+                <img src="assets/img/job1.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="title">
+            <h3>Title 1</h3>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div class="container">
+            <div class="frame">
+                <img src="assets/img/job1.jpg" alt="Image 1">
+            </div>
+        </div>
+        <div class="title">
+            <h3>Title 1</h3>
+        </div>
+    </div>
+</div>
+
+
+  
+  <div *ngIf="posts.length === 0">No posts available for this category.</div>
+  
+  <div *ngFor="let post of posts">
+    <h2>{{ post.name }}</h2>
+    <p>{{ post.content }}</p>
+    <img *ngIf="post.byteImg" [src]="'data:image/jpeg;base64,' + post.byteImg" alt="{{ post.name }}" />
+  </div>
+  
+  
+</body>
