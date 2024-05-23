@@ -1,4 +1,5 @@
 export interface Post {
+    byteImg(byteImg: any): unknown;
     id: number;
     name: string;
     content: string;

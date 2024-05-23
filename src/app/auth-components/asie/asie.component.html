@@ -1,1 +1,35 @@
-<p>asie works!</p>
+<body>
+    <h1 class="title-with-line">Maroc news</h1>
+    <div class="wrapper-container">
+      <div *ngFor="let post of getFirstThreePosts()" class="wrapper">
+        <div class="container">
+          <div class="frame">
+            <img [src]="post.processedImg" alt="post-image">
+          </div>
+        </div>
+        <div class="title">
+          <h3 nzType="link" routerLink="/nouvelle" routerLinkActive="active">{{ post.name }}</h3>
+          <p>Posted by: {{ post.postedBy }} on {{ post.date | date }}</p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <h1 class="title-with-line">Latest news</h1>
+    <div class="wrapper-container">
+      <div *ngFor="let post of getFirstThreePosts()" class="wrapper">
+        <div class="container">
+          <div class="frame">
+            <img [src]="post.processedImg" alt="post-image">
+          </div>
+        </div>
+        <div class="title">
+          <h3 nzType="link" routerLink="/nouvelle" routerLinkActive="active">{{ post.name }}</h3>
+          <p>Posted by: {{ post.postedBy }} on {{ post.date | date }}</p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+  

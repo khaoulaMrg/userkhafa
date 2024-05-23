@@ -1,0 +1,31 @@
+.post-detail {
+  width: 80%; /* Largeur du cadre */
+  margin: 0 auto; /* Centre le cadre horizontalement */
+  padding: 20px; /* Espace intérieur du cadre */
+  background-color: #f9f9f9; /* Couleur de fond du cadre */
+  border: 1px solid #ddd; /* Bordure du cadre */
+  border-radius: 5px; 
+  margin-top: 50px;/* Coins arrondis du cadre */
+}
+
+.post-detail .post-image img {
+  width: 95%;
+  height: 500px; /* Image prend toute la largeur du cadre */
+  /* Image prend toute la largeur du cadre */
+  border-radius: 5px;
+  padding: 20px;/* Coins arrondis de l'image */
+}
+
+.post-detail h1 {
+  font-size: 24px; /* Taille de la police pour le titre */
+  margin-top: 20px; /* Espace en haut du titre */
+}
+
+.post-detail p {
+  font-size: 16px; /* Taille de la police pour le contenu */
+  margin-top: 10px; /* Espace en haut du contenu */
+}
+
+.post-detail p:last-child {
+  margin-bottom: 0; /* Pas d'espace en bas du dernier paragraphe */
+}

@@ -1,91 +1,50 @@
-
-<body>
-
-    <h1 class="title-with-line">Maroc news</h1>
-    <div class="wrapper-container">
-    <div class="wrapper">
-        <div class="container">
-            <div class="frame">
-                <img src="assets/img/job1.jpg" alt="Image 1">
-            </div>
-        </div>
-        <div class="title">
-            <h3  nzType="link" routerLink="/nouvelle" routerLinkActive="active">Titre</h3>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="container">
-            <div class="frame">
-                <img src="assets/img/job1.jpg" alt="Image 1">
-            </div>
-        </div>
-        <div class="title">
-            <h3>Title 1</h3>
-        </div>
-    </div>
-    
-    <div class="wrapper">
-        <div class="container">
-            <div class="frame">
-                <img src="assets/img/job1.jpg" alt="Image 1">
-            </div>
-        </div>
-        <div class="title">
-            <h3>Title 1</h3>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-<h1 class="title-with-line">Latest news</h1>
+<h1 class="title-with-line">Trend</h1>
 <div class="wrapper-container">
-    <div class="wrapper">
-        <div class="container">
-            <div class="frame">
-                <img src="assets/img/job1.jpg" alt="Image 1">
-            </div>
-        </div>
-        <div class="title">
-            <h3  nzType="link" routerLink="/maroc" routerLinkActive="active">Title 1</h3>
-        </div>
+  <div *ngFor="let post of getFirstThreePostsByType('trend')" class="wrapper trend">
+    <div class="container">
+      <div class="frame">
+        <a [routerLink]="['/post', post.id]">
+          <img [src]="post.processedImg" alt="post-image">
+        </a>
+      </div>
     </div>
-
-    <div class="wrapper">
-        <div class="container">
-            <div class="frame">
-                <img src="assets/img/job1.jpg" alt="Image 1">
-            </div>
-        </div>
-        <div class="title">
-            <h3>Title 1</h3>
-        </div>
+    <div class="title">
+      <h3 nzType="link" routerLink="/nouvelle" routerLinkActive="active">{{ post.name }}</h3>
+      <p>Posted by: {{ post.postedBy }} on {{ post.date | date }}</p>
     </div>
-    
-    <div class="wrapper">
-        <div class="container">
-            <div class="frame">
-                <img src="assets/img/job1.jpg" alt="Image 1">
-            </div>
-        </div>
-        <div class="title">
-            <h3>Title 1</h3>
-        </div>
-    </div>
+  </div>
 </div>
 
-
-  
-  <div *ngIf="posts.length === 0">No posts available for this category.</div>
-  
-  <div *ngFor="let post of posts">
-    <h2>{{ post.name }}</h2>
-    <p>{{ post.content }}</p>
-    <img *ngIf="post.byteImg" [src]="'data:image/jpeg;base64,' + post.byteImg" alt="{{ post.name }}" />
+<h1 class="title-with-line">Latest</h1>
+<div class="wrapper-container">
+  <div *ngFor="let post of getFirstThreePostsByType('latest')" class="wrapper latest">
+    <div class="container">
+      <div class="frame">
+        <a [routerLink]="['/post', post.id]">
+          <img [src]="post.processedImg" alt="post-image">
+        </a>
+      </div>
+    </div>
+    <div class="title">
+      <h3 nzType="link" routerLink="/nouvelle" routerLinkActive="active">{{ post.name }}</h3>
+      <p>Posted by: {{ post.postedBy }} on {{ post.date | date }}</p>
+    </div>
   </div>
-  
-  
-</body>
+
+
+  <h1 class="title-with-line">Reports</h1>
+<div class="wrapper-container">
+  <div *ngFor="let post of getFirstThreePostsByType('reports')" class="wrapper latest">
+    <div class="container">
+      <div class="frame">
+        <a [routerLink]="['/post', post.id]">
+          <img [src]="post.processedImg" alt="post-image">
+        </a>
+      </div>
+    </div>
+    <div class="title">
+      <h3 nzType="link" routerLink="/nouvelle" routerLinkActive="active">{{ post.name }}</h3>
+      <p>Posted by: {{ post.postedBy }} on {{ post.date | date }}</p>
+    </div>
+  </div>
+</div>

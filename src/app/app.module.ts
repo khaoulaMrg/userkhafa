@@ -20,6 +20,7 @@ import { EuropeComponent } from './auth-components/europe/europe.component';
 import { AsieComponent } from './auth-components/asie/asie.component';
 import { AmeriqueComponent } from './auth-components/amerique/amerique.component';
 import { LatestComponent } from './auth-components/latest/latest.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { LatestComponent } from './auth-components/latest/latest.component';
     AfriqueComponent,
     EuropeComponent,
     AsieComponent,
-    AmeriqueComponent,LatestComponent
+    AmeriqueComponent,LatestComponent, PostDetailComponent
   ],
   imports: [
     BrowserModule,

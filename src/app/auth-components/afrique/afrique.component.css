@@ -68,3 +68,95 @@ h1{
     padding-bottom: 10px;
     width: 80%; /* Ajoute un espace entre le titre et la bordure */
 }
+.post-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  /* Style for the title */
+.title-with-line {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Container for the whole wrapper */
+  .wrapper-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between the items */
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust the max width as needed */
+  }
+  
+  /* Individual wrapper styling */
+  .wrapper {
+    flex: 0 0 32%; /* Adjust the percentage to fit 3 items in one line */
+    box-sizing: border-box;
+    text-align: center; /* Center align the content inside the wrapper */
+  }
+  
+  /* Container for the image frame */
+  /* Style for the title */
+.title-with-line {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Container for the whole wrapper */
+  .wrapper-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between the items */
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust the max width as needed */
+  }
+  
+  /* Individual wrapper styling */
+  .wrapper {
+    flex: 0 0 32%; /* Adjust the percentage to fit 3 items in one line */
+    box-sizing: border-box;
+    text-align: center; /* Center align the content inside the wrapper */
+    margin-bottom: 20px; /* Add space between the wrapper items */
+  }
+  
+  /* Container for the image frame */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Frame styling */
+  .frame {
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio of 16:9 */
+    position: relative;
+  }
+  
+  /* Image styling to make all images the same size */
+  .frame img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: add some rounding to the image corners */
+  }
+  
+  /* Title styling */
+  .title {
+    margin-top: -70px;
+    font-size: 16px;
+  }
+  
